@@ -7,9 +7,13 @@ import {
 } from "./Profile.styles";
 import Button from "../Button/Button";
 import { Typography } from "@material-ui/core";
+import CustomTimeline from "../CustomTimeline/CustomTimeline";
+import { CustomTimelineShortItem } from "../CustomTimeline/CustomTimeline";
+import { PersonRounded } from "@material-ui/icons";
+import ResumeData from "../../Data/ResumeData";
 export default function Profile({ name, jobTitle, imgSrc, imgAlt }) {
   return (
-    <div>
+    <>
       <ProfileContainer>
         <ProfileTitle>
           <Typography className="name">{name}</Typography>
@@ -19,11 +23,20 @@ export default function Profile({ name, jobTitle, imgSrc, imgAlt }) {
           <img className="image" src={imgSrc} alt={imgAlt} />
         </ProfileImage>
         <ProfileInformation>
-          insert timeline
+          <CustomTimeline headericon={<PersonRounded />}>
+            <CustomTimelineShortItem title="Name" text="Muhammad Zeeshan" />
+            <CustomTimelineShortItem title="Job" text={ResumeData.job} />
+            <CustomTimelineShortItem title="Email" text={ResumeData.email} />
+            <CustomTimelineShortItem
+              title="Birthday"
+              text={ResumeData.birthday}
+              connector={false}
+            />
+          </CustomTimeline>
           <br />
           <Button>my button</Button>
         </ProfileInformation>
       </ProfileContainer>
-    </div>
+    </>
   );
 }

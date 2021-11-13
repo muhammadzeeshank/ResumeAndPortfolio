@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const ProfileContainer = styled.div`
-  background-color: yellow;
-  border-radius: 6px;
+  background-color: #fff;
+  border-radius: 20px;
   width: 100%;
   display: inline-block;
+  box-shadow: 0px 2px 92px 0px rgb(0 0 0 / 7%);
 `;
 export const ProfileTitle = styled.div`
   line-height: 18px;

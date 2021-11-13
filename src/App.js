@@ -17,7 +17,7 @@ function App() {
               imgAlt="Muhammad Zeeshan avatar"
             />
           </Grid>
-          <Grid item xs style={{ backgroundColor: "red" }}>
+          <Grid item xs style={{ backgroundColor: "white" }}>
             <Switch>
               <Route exact path="/" component={Resume} />
               <Route exact path="/portfolio" component={Portfolio} />

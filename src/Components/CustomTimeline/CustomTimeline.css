@@ -1,0 +1,6 @@
+.timeline .MuiTimelineItem-missingOppositeContent:before {
+  display: none;
+}
+.timeline {
+  color: red !important;
+}
