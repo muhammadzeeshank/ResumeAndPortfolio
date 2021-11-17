@@ -1,5 +1,13 @@
 import React from "react";
-
-export default function Button() {
-  return <div></div>;
+import { CustomButton, BtnIconContainer } from "./Button.styles";
+export default function Button({ text, icon }) {
+  return (
+    <>
+      <CustomButton
+        endIcon={icon ? <BtnIconContainer>{icon}</BtnIconContainer> : null}
+      >
+        <span className="btn-text">{text}</span>
+      </CustomButton>
+    </>
+  );
 }

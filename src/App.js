@@ -7,8 +7,8 @@ import Profile from "./Components/Profile/Profile";
 function App() {
   return (
     <>
-      <Container>
-        <Grid container>
+      <Container className="top_60">
+        <Grid container spacing="10">
           <Grid item xs={12} sm={12} md={4} lg={3}>
             <Profile
               name="Muhammad Zeeshan"

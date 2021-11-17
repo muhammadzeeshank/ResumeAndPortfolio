@@ -11,6 +11,8 @@ import CustomTimeline from "../CustomTimeline/CustomTimeline";
 import { CustomTimelineShortItem } from "../CustomTimeline/CustomTimeline";
 import { PersonRounded } from "@material-ui/icons";
 import ResumeData from "../../Data/ResumeData";
+import { CloudDownload } from "@material-ui/icons";
+
 export default function Profile({ name, jobTitle, imgSrc, imgAlt }) {
   return (
     <>
@@ -34,7 +36,9 @@ export default function Profile({ name, jobTitle, imgSrc, imgAlt }) {
             />
           </CustomTimeline>
           <br />
-          <Button>my button</Button>
+          <div className="btn_container">
+            <Button text="Download CV" icon={<CloudDownload />} />
+          </div>
         </ProfileInformation>
       </ProfileContainer>
     </>

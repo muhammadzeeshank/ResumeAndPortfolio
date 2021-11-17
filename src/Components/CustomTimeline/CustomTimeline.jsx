@@ -6,7 +6,7 @@ import { TimelineDot } from "@material-ui/lab";
 import { TimelineContent } from "@material-ui/lab";
 import { MyTimeline } from "./CustomTimeline.style";
 import { Typography } from "@material-ui/core";
-// import "./CustomTimeline.css";
+
 export default function CustomTimeline({ headericon, headertitle, children }) {
   return (
     <>

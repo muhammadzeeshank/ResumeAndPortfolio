@@ -1,4 +1,8 @@
 import styled from "styled-components";
+export const PrimaryColor = "#ffc500";
+export const PrimaryTextColor = "#000";
+export const SecondaryTextColor = "333";
+export const TernaryTextColor = "#7F7F7F";
 
 export const ProfileContainer = styled.div`
   background-color: #fff;
@@ -6,6 +10,10 @@ export const ProfileContainer = styled.div`
   width: 100%;
   display: inline-block;
   box-shadow: 0px 2px 92px 0px rgb(0 0 0 / 7%);
+  .btn_container {
+    display: flex;
+    justify-content: center;
+  }
 `;
 export const ProfileTitle = styled.div`
   line-height: 18px;
@@ -28,4 +36,6 @@ export const ProfileImage = styled.div`
     width: 100%;
   }
 `;
-export const ProfileInformation = styled.div``;
+export const ProfileInformation = styled.div`
+  margin: -44px 0px 30px 5px;
+`;

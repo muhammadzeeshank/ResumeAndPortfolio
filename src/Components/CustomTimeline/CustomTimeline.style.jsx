@@ -1,10 +1,7 @@
 import styled from "styled-components";
 import { Timeline } from "@material-ui/lab";
+import { PrimaryColor, TernaryTextColor } from "../Profile/Profile.styles";
 
-const PrimaryColor = "#ffc500";
-const PrimaryTextColor = "#000";
-const SecondaryTextColor = "333";
-const TernaryTextColor = "#7F7F7F";
 export const MyTimeline = styled(Timeline)`
   padding: 0 !important;
   .timeline-item-header {
@@ -34,17 +31,18 @@ export const MyTimeline = styled(Timeline)`
     font-size: small;
     padding: 10px;
     border: none;
+    box-shadow: 0px 2px 32px 0px rgb(4 123 248 / 30%);
   }
   .timeline-text-header {
     padding-top: 12px;
   }
   .MuiTimelineContent-root {
     padding-top: 0;
+    margin-top: -6px;
   }
   // Other Items
   .timeline-text-item {
     font-size: 13.5px;
-    padding-top: -10px;
   }
   .item-subtext {
     text-decoration: none;
