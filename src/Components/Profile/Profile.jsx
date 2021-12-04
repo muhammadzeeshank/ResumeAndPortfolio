@@ -11,7 +11,8 @@ import CustomTimeline from "../CustomTimeline/CustomTimeline";
 import { CustomTimelineShortItem } from "../CustomTimeline/CustomTimeline";
 import { PersonRounded } from "@material-ui/icons";
 import ResumeData from "../../Data/ResumeData";
-import { CloudDownload } from "@material-ui/icons";
+import { IconContext } from "react-icons";
+import { ImDownload3 } from "react-icons/im";
 
 export default function Profile({ name, jobTitle, imgSrc, imgAlt }) {
   return (
@@ -37,7 +38,14 @@ export default function Profile({ name, jobTitle, imgSrc, imgAlt }) {
           </CustomTimeline>
           <br />
           <div className="btn_container">
-            <Button text="Download CV" icon={<CloudDownload />} />
+            <Button
+              text="Download CV"
+              icon={
+                <IconContext.Provider value={{ style: { fontSize: "13px" } }}>
+                  <ImDownload3 />
+                </IconContext.Provider>
+              }
+            />
           </div>
         </ProfileInformation>
       </ProfileContainer>

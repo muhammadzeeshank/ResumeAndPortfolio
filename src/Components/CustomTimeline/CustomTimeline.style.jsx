@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Timeline } from "@material-ui/lab";
-import { PrimaryColor, TernaryTextColor } from "../Profile/Profile.styles";
+import { PrimaryColor, TernaryTextColor } from "../../App.styles";
 
 export const MyTimeline = styled(Timeline)`
   padding: 0 !important;
@@ -25,7 +25,10 @@ export const MyTimeline = styled(Timeline)`
 
   // Header item
   .timeline-dot-header {
-    margin: 0;
+    .MuiSvgIcon-root {
+      font-size: 1.3rem;
+    }
+    margin: 18px 0 0 4px;
     color: black;
     background-color: ${PrimaryColor};
     font-size: small;

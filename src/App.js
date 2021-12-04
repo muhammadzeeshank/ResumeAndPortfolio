@@ -1,9 +1,13 @@
 import { Container, Grid } from "@material-ui/core";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Switch } from "react-router-dom";
 import Resume from "./Pages/Resume/Resume";
 import Portfolio from "./Pages/Portfolio/Portfolio";
 import Profile from "./Components/Profile/Profile";
+import Header from "./Components/Header/Header";
+import Contact from "./Pages/Contact/Contact";
+
 function App() {
   return (
     <>
@@ -17,10 +21,12 @@ function App() {
               imgAlt="Muhammad Zeeshan avatar"
             />
           </Grid>
-          <Grid item xs style={{ backgroundColor: "white" }}>
+          <Grid item xs style={{ backgroundColor: "green" }}>
+            <Header />
             <Switch>
               <Route exact path="/" component={Resume} />
               <Route exact path="/portfolio" component={Portfolio} />
+              <Route exact path="/contact" component={Contact} />
             </Switch>
           </Grid>
         </Grid>

@@ -1,12 +1,8 @@
 import styled from "styled-components";
-export const PrimaryColor = "#ffc500";
-export const PrimaryTextColor = "#000";
-export const SecondaryTextColor = "333";
-export const TernaryTextColor = "#7F7F7F";
 
 export const ProfileContainer = styled.div`
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 6px;
   width: 100%;
   display: inline-block;
   box-shadow: 0px 2px 92px 0px rgb(0 0 0 / 7%);
