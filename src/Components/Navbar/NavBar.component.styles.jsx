@@ -2,7 +2,8 @@ import { Navbar as bar } from "react-bootstrap";
 import { NavLink as Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 import { Home } from "@material-ui/icons";
-import { Button } from "@material-ui/core";
+import { Button as HButton } from "@material-ui/core";
+
 import {
   PrimaryColor,
   HoverColor,
@@ -10,16 +11,27 @@ import {
   Border_Radius,
 } from "../../App.styles";
 
-export const HomeButton = styled(Button)`
+export const HomeButton = styled(HButton)`
   background-color: ${PrimaryColor};
   padding: 18px 20px;
   border-radius: ${Border_Radius} 0px 0px ${Border_Radius};
+
   &:hover {
     background-color: ${HoverColor};
   }
 `;
 export const Navbar = styled(bar)`
-  padding: 0 16px 0 0;
+  .sc-eCImPb {
+    margin-right: 16px;
+    @media (max-width: 991px) {
+      margin-right: 0;
+      border-radius: 0 0 ${Border_Radius} ${Border_Radius};
+    }
+  }
+  padding: 0;
+  .navbar-nav .nav-link {
+    padding-left: 1rem;
+  }
   border-radius: ${Border_Radius};
   & .navbar-brand {
     padding: 0;
@@ -34,6 +46,8 @@ export const HomeIcon = styled(Home)`
   justify-content: center;
 `;
 export const NavbarToggler = styled(bar.Toggle)`
+  margin-right: 8px;
+  border: none;
   &.navbar-toggler {
     border-color: ${PrimaryTextColor};
   }

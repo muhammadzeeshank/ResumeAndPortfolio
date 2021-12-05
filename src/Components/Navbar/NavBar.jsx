@@ -1,8 +1,9 @@
 import React from "react";
 import { Nav, Container } from "react-bootstrap";
-import Button from "../Button/Button";
 import { IconContext } from "react-icons";
 import { FaTelegramPlane } from "react-icons/fa";
+import Button from "../Button/Button";
+
 import {
   Navbar,
   NavLink,
@@ -35,14 +36,17 @@ export default function NavBar() {
               Contact
             </NavLink>
           </Nav>
-          <Button
-            text="Hire Me"
-            icon={
-              <IconContext.Provider value={{ style: { fontSize: "13px" } }}>
-                <FaTelegramPlane />
-              </IconContext.Provider>
-            }
-          />
+          <Nav>
+            <Button
+              className="hire-me-btn"
+              text="Hire Me"
+              icon={
+                <IconContext.Provider value={{ style: { fontSize: "13px" } }}>
+                  <FaTelegramPlane />
+                </IconContext.Provider>
+              }
+            />
+          </Nav>
         </Navbar.Collapse>
       </Navbar>
     </>
