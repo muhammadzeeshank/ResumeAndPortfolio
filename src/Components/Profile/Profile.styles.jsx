@@ -4,6 +4,7 @@ export const ProfileContainer = styled.div`
   background-color: #fff;
   border-radius: ${Border_Radius};
   width: 100%;
+  min-width: 275px;
   display: inline-block;
   box-shadow: 0px 2px 92px 0px rgb(0 0 0 / 12%);
   .btn_container {

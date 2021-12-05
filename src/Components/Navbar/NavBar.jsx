@@ -2,7 +2,7 @@ import React from "react";
 import { Nav, Container } from "react-bootstrap";
 import { IconContext } from "react-icons";
 import { FaTelegramPlane } from "react-icons/fa";
-import Button from "../Button/Button";
+// import Button from "../Button/Button";
 
 import {
   Navbar,
@@ -10,6 +10,7 @@ import {
   HomeIcon,
   NavbarToggler,
   HomeButton,
+  HireButton,
 } from "./NavBar.component.styles";
 export default function NavBar() {
   return (
@@ -37,7 +38,7 @@ export default function NavBar() {
             </NavLink>
           </Nav>
           <Nav>
-            <Button
+            <HireButton
               className="hire-me-btn"
               text="Hire Me"
               icon={

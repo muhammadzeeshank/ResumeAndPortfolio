@@ -3,6 +3,7 @@ import { NavLink as Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 import { Home } from "@material-ui/icons";
 import { Button as HButton } from "@material-ui/core";
+import Button from "../Button/Button";
 
 import {
   PrimaryColor,
@@ -10,7 +11,12 @@ import {
   PrimaryTextColor,
   Border_Radius,
 } from "../../App.styles";
-
+export const HireButton = styled(Button)`
+margin-right: 16px;
+    @media (max-width: 991px) {
+      margin-right: 0;
+      border-radius: 0 0 ${Border_Radius} ${Border_Radius};
+`;
 export const HomeButton = styled(HButton)`
   background-color: ${PrimaryColor};
   padding: 18px 20px;
@@ -23,13 +29,6 @@ export const HomeButton = styled(HButton)`
 export const Navbar = styled(bar)`
   box-shadow: 0px 2px 92px 0px rgb(0 0 0 / 12%);
   background-color: #fff !important;
-  .sc-eCImPb {
-    margin-right: 16px;
-    @media (max-width: 991px) {
-      margin-right: 0;
-      border-radius: 0 0 ${Border_Radius} ${Border_Radius};
-    }
-  }
   padding: 0;
   .navbar-nav .nav-link {
     padding-left: 1rem;
