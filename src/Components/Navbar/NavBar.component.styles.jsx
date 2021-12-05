@@ -21,6 +21,8 @@ export const HomeButton = styled(HButton)`
   }
 `;
 export const Navbar = styled(bar)`
+  box-shadow: 0px 2px 92px 0px rgb(0 0 0 / 12%);
+  background-color: #fff !important;
   .sc-eCImPb {
     margin-right: 16px;
     @media (max-width: 991px) {

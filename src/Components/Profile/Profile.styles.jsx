@@ -1,11 +1,11 @@
 import styled from "styled-components";
-
+import { Border_Radius } from "../../App.styles";
 export const ProfileContainer = styled.div`
   background-color: #fff;
-  border-radius: 6px;
+  border-radius: ${Border_Radius};
   width: 100%;
   display: inline-block;
-  box-shadow: 0px 2px 92px 0px rgb(0 0 0 / 7%);
+  box-shadow: 0px 2px 92px 0px rgb(0 0 0 / 12%);
   .btn_container {
     display: flex;
     justify-content: center;

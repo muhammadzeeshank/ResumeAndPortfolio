@@ -7,6 +7,7 @@ import Portfolio from "./Pages/Portfolio/Portfolio";
 import Profile from "./Components/Profile/Profile";
 import Header from "./Components/Header/Header";
 import Contact from "./Pages/Contact/Contact";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -21,13 +22,14 @@ function App() {
               imgAlt="Muhammad Zeeshan avatar"
             />
           </Grid>
-          <Grid item xs style={{ backgroundColor: "green" }}>
+          <Grid item xs>
             <Header />
             <Switch>
               <Route exact path="/" component={Resume} />
               <Route exact path="/portfolio" component={Portfolio} />
               <Route exact path="/contact" component={Contact} />
             </Switch>
+            <Footer />
           </Grid>
         </Grid>
       </Container>
