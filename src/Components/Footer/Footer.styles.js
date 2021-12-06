@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { Border_Radius } from "../../App.styles";
 export const FooterContainer = styled.div`
   background-color: #1e1e1e;

@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { Container } from "react-bootstrap";
 
 export const PrimaryColor = "#ffc500";
@@ -26,6 +26,7 @@ export const ItemContainer = styled.div`
 `;
 export const MainContent = styled.div`
   background-color: #fff;
+  overflow: hidden;
   min-height: 100vh;
   border-radius: ${Border_Radius};
   box-shadow: 0px 2px 92px 0px rgb(0 0 0 / 9%);
