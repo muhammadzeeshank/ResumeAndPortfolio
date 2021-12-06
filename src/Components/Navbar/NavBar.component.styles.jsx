@@ -27,7 +27,7 @@ export const HomeButton = styled(HButton)`
   }
 `;
 export const Navbar = styled(bar)`
-  box-shadow: 0px 2px 92px 0px rgb(0 0 0 / 12%);
+  box-shadow: 0px 2px 92px 0px rgb(0 0 0 / 9%);
   background-color: #fff !important;
   padding: 0;
   .navbar-nav .nav-link {

@@ -1,5 +1,4 @@
-import { Container, Grid } from "@material-ui/core";
-// import { Container } from "react-bootstrap";
+import { Container } from "@material-ui/core";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Switch } from "react-router-dom";
@@ -9,7 +8,7 @@ import Profile from "./Components/Profile/Profile";
 import Header from "./Components/Header/Header";
 import Contact from "./Pages/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
-import { MyContainer, ItemContainer } from "./App.styles";
+import { MyContainer, ItemContainer, MainContent } from "./App.styles";
 function App() {
   return (
     <>
@@ -23,11 +22,13 @@ function App() {
           />
           <ItemContainer>
             <Header />
-            <Switch>
-              <Route exact path="/" component={Resume} />
-              <Route exact path="/portfolio" component={Portfolio} />
-              <Route exact path="/contact" component={Contact} />
-            </Switch>
+            <MainContent>
+              <Switch>
+                <Route exact path="/" component={Resume} />
+                <Route exact path="/portfolio" component={Portfolio} />
+                <Route exact path="/contact" component={Contact} />
+              </Switch>
+            </MainContent>
             <Footer />
           </ItemContainer>
         </MyContainer>
