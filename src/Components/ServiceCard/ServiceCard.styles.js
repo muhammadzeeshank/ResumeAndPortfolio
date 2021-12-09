@@ -7,6 +7,9 @@ export const Card = styled.div`
   min-height: 186px;
   background-color: #fff;
   border-radius: 10px;
+  .icon {
+    font-size: 5rem;
+  }
 `;
 export const CardTitle = styled(Typography)`
   font-size: 14px;

@@ -27,7 +27,7 @@ export default function NavBar() {
         <NavbarToggler aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <NavLink $navItem exact to="/" className="nav-link">
+            <NavLink $navItem exact to="/resume" className="nav-link">
               Resume
             </NavLink>
             <NavLink $navItem exact to="/portfolio" className="nav-link">
