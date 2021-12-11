@@ -67,7 +67,7 @@ export default function Home() {
             </li>
           </SkillList>
         </Section>
-        <Section sectiontitle="Skills">
+        <Section sectiontitle="Programming Languages">
           <SkillList>
             <li>
               <CustomProgressbar

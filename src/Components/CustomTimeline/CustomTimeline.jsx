@@ -12,12 +12,18 @@ import PropTypes from "prop-types";
 const displayConnector = (index, array) =>
   index === array.length - 1 ? false : true;
 
-export default function CustomTimeline({ headericon, headertitle, children }) {
+export default function CustomTimeline({
+  headericon,
+  headertitle,
+  children,
+  className,
+}) {
   return (
     <>
-      <MyTimeline className="timeline">
+      <MyTimeline className={className}>
         {/* Title */}
         <CustomTimelineHeaderItem
+          className={className}
           headericon={headericon}
           headertitle={headertitle}
         />
@@ -26,7 +32,7 @@ export default function CustomTimeline({ headericon, headertitle, children }) {
           ? children.map((listitem, index, array) => (
               <CustomTimelineItem
                 connector={displayConnector(index, array)}
-                key={listitem.props.id}
+                key={`cti${index}`}
               >
                 {listitem}
               </CustomTimelineItem>

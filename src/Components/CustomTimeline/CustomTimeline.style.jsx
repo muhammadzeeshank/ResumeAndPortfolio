@@ -37,7 +37,7 @@ export const MyTimeline = styled(Timeline)`
     box-shadow: 0px 2px 32px 0px rgb(4 123 248 / 30%);
   }
   .timeline-text-header {
-    padding-top: 12px;
+    padding-top: 25px;
   }
   .MuiTimelineContent-root {
     padding-top: 0;

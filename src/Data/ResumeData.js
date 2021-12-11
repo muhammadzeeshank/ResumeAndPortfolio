@@ -2,12 +2,15 @@ import { Facebook } from "@material-ui/icons";
 import { LinkedIn } from "@material-ui/icons";
 import { GitHub } from "@material-ui/icons";
 
-export default {
-  name: "Muhammad Zeeshan",
-  title: "Computer Engineer",
-  job: "Student",
-  email: "zeeshan124go@gmail.com",
-  birthday: "13 August 2000",
+const ResumeData = {
+  profile: {
+    name: "Muhammad Zeeshan",
+    title: "Computer Engineer",
+    job: "Student",
+    email: "zeeshan124go@gmail.com",
+    birthday: "13 August 2000",
+  },
+
   socials: {
     facebook: {
       link: "https://www.facebook.com/pk.zeeshan",
@@ -41,4 +44,32 @@ export default {
       value: "70%",
     },
   },
+  education: [
+    {
+      id: "1",
+      degree: "B.E in Computer Engineering",
+      institution:
+        "National University of Sciences and Technology (NUST) , Islamabad",
+      period: "10/2018 - Present",
+      description: "CGPA: 3.54",
+    },
+    {
+      id: "2",
+      degree: "FSC Pre Engineering",
+      institution: "Abdul Razaq Fazaia College (ARFC), Mianwali",
+      period: "04/2016 - 04/2018",
+      description: "Marks: 84.36%",
+    },
+  ],
+  work: [
+    {
+      id: "1",
+      jobtitle: "Video Editor",
+      organization: "EME Center of Innovation Entrepreneurship - ICE2",
+      period: "12/2018 - 01/2019",
+      description: "Successfully edited promo of Stress Capital Workshop(SCW)",
+    },
+  ],
 };
+
+export default ResumeData;

@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { TernaryTextColor } from "../../App.styles";
+import { Typography } from "@material-ui/core";
 import { Border_Radius } from "../../App.styles";
 export const ProfileContainer = styled.div`
   background-color: #fff;
@@ -35,4 +37,12 @@ export const ProfileImage = styled.div`
 `;
 export const ProfileInformation = styled.div`
   margin: -44px 0px 30px 5px;
+`;
+export const MyTypography = styled(Typography)`
+  font-size: 13.5px;
+
+  .item-subtext {
+    text-decoration: none;
+    color: ${TernaryTextColor};
+  }
 `;
