@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Timeline } from "@material-ui/lab";
-import { PrimaryColor, TernaryTextColor } from "../../App.styles";
+import { PrimaryColor } from "../../App.styles";
 
 export const MyTimeline = styled(Timeline)`
   padding: 0 !important;
@@ -44,13 +44,7 @@ export const MyTimeline = styled(Timeline)`
     margin-top: -6px;
   }
   // Other Items
-  .timeline-text-item {
-    font-size: 13.5px;
-  }
-  .item-subtext {
-    text-decoration: none;
-    color: ${TernaryTextColor};
-  }
+
   .items-separator {
     padding-left: 18px;
   }

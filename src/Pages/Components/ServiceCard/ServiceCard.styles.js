@@ -7,6 +7,7 @@ export const Card = styled.div`
   min-height: 186px;
   background-color: #fff;
   border-radius: 10px;
+  width: 100%;
   .icon {
     font-size: 5rem;
   }

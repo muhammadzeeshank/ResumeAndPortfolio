@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { HoverColor } from "../../App.styles";
+import { HoverColor } from "../../../App.styles";
 
 const GreyBackground = css`
   background-color: #fafafa;
@@ -16,6 +16,7 @@ const checkbg = (props) => {
 };
 export const MSection = styled.div`
   padding: 50px 30px;
+  width: 100%;
   ${checkbg}
   .section-title {
     margin-bottom: 30px;
@@ -23,6 +24,7 @@ export const MSection = styled.div`
     font-size: 18px;
     font-weight: 600;
     position: relative;
+
     span {
       height: 7px;
       width: 100%;

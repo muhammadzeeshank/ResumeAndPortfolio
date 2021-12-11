@@ -6,6 +6,11 @@ import { TimelineDot } from "@material-ui/lab";
 import { TimelineContent } from "@material-ui/lab";
 import { MyTimeline } from "./CustomTimeline.style";
 import { Typography } from "@material-ui/core";
+import PropTypes from "prop-types";
+
+// Function to check whether to display line connector or not
+const displayConnector = (index, array) =>
+  index === array.length - 1 ? false : true;
 
 export default function CustomTimeline({ headericon, headertitle, children }) {
   return (
@@ -17,12 +22,22 @@ export default function CustomTimeline({ headericon, headertitle, children }) {
           headertitle={headertitle}
         />
         {/* Other Items */}
-        {children}
+        {Array.isArray(children)
+          ? children.map((listitem, index, array) => (
+              <CustomTimelineItem
+                connector={displayConnector(index, array)}
+                key={listitem.props.id}
+              >
+                {listitem}
+              </CustomTimelineItem>
+            ))
+          : children}
       </MyTimeline>
     </>
   );
 }
-export function CustomTimelineHeaderItem({ headericon, headertitle }) {
+// Header item which includes icon and title
+const CustomTimelineHeaderItem = ({ headericon, headertitle }) => {
   return (
     <>
       <TimelineItem className="timeline-item-header">
@@ -40,25 +55,29 @@ export function CustomTimelineHeaderItem({ headericon, headertitle }) {
       </TimelineItem>
     </>
   );
-}
-export function CustomTimelineSeparator({ connector = true }) {
+};
+// line Seperatore between timeline dots
+const CustomTimelineSeparator = ({ connector = true }) => {
   return (
     <TimelineSeparator className="items-separator">
       <TimelineDot variant="outlined" className="timeline-dot"></TimelineDot>
       {connector ? <TimelineConnector /> : null}
     </TimelineSeparator>
   );
-}
-export function CustomTimelineShortItem({ title, text, connector }) {
+};
+const CustomTimelineItem = ({ connector, children }) => {
   return (
     <TimelineItem>
       <CustomTimelineSeparator connector={connector} />
-      <TimelineContent>
-        <Typography className="timeline-text-item">
-          <span>{title}: </span>
-          <span className="item-subtext">{text}</span>
-        </Typography>
-      </TimelineContent>
+      <TimelineContent>{children}</TimelineContent>
     </TimelineItem>
   );
-}
+};
+CustomTimeline.propTypes = {
+  headericon: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  headertitle: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+  ]),
+};
