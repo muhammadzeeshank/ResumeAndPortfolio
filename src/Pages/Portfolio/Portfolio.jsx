@@ -1,12 +1,14 @@
 import React from "react";
 import Section from "../Components/Section/Section";
 import SectionGrid from "../../UI-Core/SectionGrid.styles";
+import ButtonBox from "../../Components/ButtonBox/ButtonBox";
 import ProjectCard from "../Components/ProjectCard/ProjectCard";
 export default function Portfolio() {
   return (
     <>
       <Section sectiontitle="Portfolio">
-        <SectionGrid minWidth="230px">
+        <ButtonBox />
+        <SectionGrid gridGap="30px" minWidth="230px">
           <ProjectCard
             imgSrc="https://thetav.online/html/mat/default/images/works/work-01.jpg"
             imgAlt="LaptopProject"

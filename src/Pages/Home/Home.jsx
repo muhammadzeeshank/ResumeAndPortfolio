@@ -3,7 +3,8 @@ import { CustomProgressbar } from "../Components/Progressbar/Progressbar";
 import { SkillList, TwoColumnsContainer } from "./Home.styles";
 import Section from "../Components/Section/Section";
 import ResumeData from "../../Data/ResumeData";
-import { SectionText, SectionGrid } from "./Home.styles";
+import { SectionText } from "./Home.styles";
+import SectionGrid from "../../UI-Core/SectionGrid.styles";
 import ServiceCard from "../Components/ServiceCard/ServiceCard";
 import { CgWebsite } from "react-icons/cg";
 import { PrimaryColor } from "../../App.styles";
@@ -18,7 +19,7 @@ export default function Home() {
 
       {/* My Services Section */}
       <Section bg="grey" sectiontitle="My Services">
-        <SectionGrid>
+        <SectionGrid minWidth="200px" gridGap="30px">
           <ServiceCard
             Icon={CgWebsite}
             Title="Web Development"
