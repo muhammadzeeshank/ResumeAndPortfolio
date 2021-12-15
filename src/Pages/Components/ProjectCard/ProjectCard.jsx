@@ -1,7 +1,8 @@
 import * as React from "react";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
+// import CardMedia from "@mui/material/CardMedia";
 import PropTypes from "prop-types";
+import ImageHover from "../ImageHover/ImageHover";
 
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import {
@@ -12,6 +13,7 @@ import {
 export default function ProjectCard({
   imgSrc,
   imgAlt,
+  imgIcon,
   title,
   description,
   btnText,
@@ -20,7 +22,8 @@ export default function ProjectCard({
   return (
     <CardContainer sx={{ maxWidth: 345 }}>
       <CardActionArea target="_blank" href={to}>
-        <CardMedia component="img" height="200" image={imgSrc} alt={imgAlt} />
+        <ImageHover Icon={imgIcon} imgSrc={imgSrc} imgAlt={imgAlt} />
+        {/* <CardMedia component="img" height="200" image={imgSrc} alt={imgAlt} /> */}
         <CardContent>
           <TitleText gutterBottom variant="h5" component="div">
             {title}
@@ -39,6 +42,7 @@ export default function ProjectCard({
 ProjectCard.propTypes = {
   imgSrc: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   imgAlt: PropTypes.string,
+  imgIcon: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
   title: PropTypes.string,
   description: PropTypes.string,
   btnText: PropTypes.string,

@@ -23,6 +23,16 @@ export const CardContainer = styled(Card)`
   .MuiButton-root:hover {
     color: ${HoverColor};
   }
+  &:hover {
+    .content-overlay {
+      opacity: 0.3;
+    }
+    .content-details {
+      top: 50%;
+      left: 50%;
+      opacity: 1;
+    }
+  }
 `;
 export const DescriptionText = styled(Typography)`
   font-size: 13px;

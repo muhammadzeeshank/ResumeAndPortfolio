@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Button } from "@material-ui/core";
-import { HoverColor, PrimaryColor, TernaryTextColor } from "../../App.styles";
+import { HoverColor, PrimaryColor } from "../../App.styles";
 
 export const TabFlex = styled.div`
   display: flex;
